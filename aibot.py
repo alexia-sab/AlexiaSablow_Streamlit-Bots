@@ -25,7 +25,8 @@ def ai_ask(prompt, data=None, temperature=0.5, max_tokens=250, model="open-mistr
     data_str = json.dumps(data, indent=2)
     message += f"\n\nData to analyze:\n{data_str}"
   
-  # Prepare the API request payload payload = {
+  # Prepare the API request payload 
+    payload = {
       "messages": [{"role": "user", "content": message}],
       "temperature": float(temperature),
       "model": model,
