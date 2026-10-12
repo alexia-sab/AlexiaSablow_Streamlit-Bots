@@ -1,6 +1,11 @@
 import streamlit as st
+import numpy as np
 
 st.title("Alexia Sablow - Echo Bot")
+
+# Show the dashboard image once at the top
+with st.chat_message("assistant"):
+  st.image("PowerBIDashboard.png", caption="CIT 144 – Demographics Data Visualization")
 
 # Initialize chat history
 if "messages" not in st.session_state:
