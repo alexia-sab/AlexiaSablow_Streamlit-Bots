@@ -67,6 +67,12 @@ st.title("Alexia Sablow - AI Bot")
 if "messages" not in st.session_state:
   st.session_state.messages = []
 
+# Show the dashboard image once at the top
+with st.chat_message("assistant"):
+st.image(“TheSavedImage.png", caption="CIT 144 – Demographics Data Visualization")
+
+                ################################### where the image should go
+
 # Display chat messages from history on app rerun
 for message in st.session_state.messages:
   with st.chat_message(message["role"]):
