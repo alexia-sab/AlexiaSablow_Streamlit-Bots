@@ -38,7 +38,8 @@ def ai_ask(prompt, data=None, temperature=0.5, max_tokens=250, model="open-mistr
       "Accept": "application/json"
   }
   
-  # Make the API request response = requests.post(api_url, headers=headers, json=payload)
+  # Make the API request 
+  response = requests.post(api_url, headers=headers, json=payload)
   if response.status_code == 429:
     return "You have hit the rate limit for the API. Please try again later."
   
